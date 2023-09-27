@@ -87,4 +87,6 @@ api.add_resource(BirdByID, '/birds/<int:id>')
 def index(id=0):
     return render_template("index.html")
 
-    
+
+if __name__ == "__main__":
+    app.run()
