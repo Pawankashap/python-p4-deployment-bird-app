@@ -81,3 +81,10 @@ class BirdByID(Resource):
         return make_response('', 204)
 
 api.add_resource(BirdByID, '/birds/<int:id>')
+
+@app.route('/')
+@app.route('/<int:id>')
+def index(id=0):
+    return render_template("index.html")
+
+    
